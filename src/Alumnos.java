@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class Alumno {
     private String nombre;
@@ -63,6 +66,14 @@ class Alumno {
     public boolean hasAbonoMatricula() {
         return abonoMatricula;
     }
+
+    static List<Alumno> alumnos = new ArrayList<>(
+            Arrays.asList(
+                    new Alumno("Juan", "Perez", 20, false, 8, true),
+                    new Alumno("María", "Gomez", 22, true, 6, false),
+                    new Alumno("Carlos", "Lopez", 18, false, 7, true)
+            )
+    );
 
     public String toString() {
         return apellido + ", " + nombre + "\t- " + edad + " años";
